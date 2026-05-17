@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Dosen {
+  id        String      @id @default(uuid()) @db.Uuid
+  nama      String
+  nidn      String      @unique
+  mahasiswa Mahasiswa[]
+}
+
+model Mahasiswa {
+  id                  String @id @default(uuid()) @db.Uuid
+  nama                String
+  nim                 String @unique
+  dosen_pembimbing_id String @db.Uuid
+  dosen_pembimbing    Dosen  @relation(fields: [dosen_pembimbing_id], references: [id])
+}

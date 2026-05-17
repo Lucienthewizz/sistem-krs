@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark-900 shadow-glow;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-700 hover:bg-dark-800 text-white px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-dark-700 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+
+  .input-field {
+    @apply w-full bg-dark-800 border border-dark-700 rounded-none px-4 py-2 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors;
+  }
+  
+  .card {
+    @apply bg-dark-800 border border-dark-700 shadow-lg p-6;
+  }
+  
+  .table-header {
+    @apply bg-dark-700 text-gray-300 text-left text-xs font-semibold uppercase tracking-wider px-6 py-3 border-b border-dark-700;
+  }
+  
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-300 border-b border-dark-700/50;
+  }
+}
